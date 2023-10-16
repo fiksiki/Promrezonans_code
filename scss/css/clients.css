@@ -1,0 +1,77 @@
+.clients__wrap {
+  overflow: hidden;
+}
+
+.clients__lists-flow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  gap: 72px;
+}
+.clients__lists-flow:hover .marquee {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.clients__list {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 72px;
+  min-width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .clients__list {
+    gap: 20px;
+  }
+}
+
+.clients__item {
+  height: 112px;
+  max-width: 188px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .clients__item {
+    height: 50px;
+  }
+}
+
+.clients__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.marquee {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+}
+
+@-webkit-keyframes scroll {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(calc(-100% - 72px));
+            transform: translateX(calc(-100% - 72px));
+  }
+}
+
+@keyframes scroll {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(calc(-100% - 72px));
+            transform: translateX(calc(-100% - 72px));
+  }
+}

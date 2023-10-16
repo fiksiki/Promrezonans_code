@@ -1,0 +1,126 @@
+.site-header {
+  padding-top: 10px;
+  background-color: $white;
+
+  @media screen and (max-width: $w-ltb) {
+    display: none;
+  }
+}
+.site-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 19px;
+  gap: 20px;
+
+  @media screen and (max-width: $w-l) {
+    column-gap: 10px;
+  }
+
+  @media screen and (max-width: $w-ltb) {
+    flex-wrap: wrap;
+  }
+}
+
+.site-header__bottom {
+  background-color: $bg-color-grey;
+}
+
+.site-header-mobile {
+  background-color: $white;
+  height: 50px;
+
+  @media screen and (min-width: calc($w-ltb + 1px)) {
+    display: none;
+  }
+
+  &.fixed {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.site-header-mobile__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 38px;
+  border-bottom: 1px solid #F7F7F9;
+
+  &.grey {
+    background-color: $bg-color-grey;
+    justify-content: center;
+    column-gap: 0;
+
+    .header-logo--mobile {
+      margin: 0 auto;
+    }
+
+    .site-phone--mobile-top {
+      display: none;
+    }
+  }
+}
+
+.site-header-mobile__toggler {
+  width: 46px;
+  height: 46px;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/burger.svg");
+  border: none;
+
+  &.close {
+    background-image: url("../img/icons/burger-close.svg");
+
+    @media screen and (min-width: 320px) {
+      margin-left: -46px;
+    }
+  }
+}
+
+.site-header-mobile__top-nav {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 38px;
+  align-items: center;
+  // flex: 1 1 auto;
+}
+
+.site-header-mobile__bottom {
+  background-color: $bg-color-grey;
+  padding: 40px 20px 30px;
+  transform: translateY(0);
+  transition: $ts;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  overflow-y: scroll;
+  height: calc(100% - 50px);
+
+  &.close {
+    // display: none;
+    top: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.mobile-phone-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 21px;
+  margin-top: 60px;
+}
+
+.page-main--margin {
+  
+  @media screen and (max-width: $w-ltb) {
+    margin-top: 50px;
+  }
+}

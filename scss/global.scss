@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+  font-family: $font-body;
+  font-size: 16px;
+	line-height: 21px;
+  background-color: $bg-color-grey;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+input, button, select {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  font-family: $font-body;
+}
+
+h1 {
+  font-size: size(48);
+  line-height: size(58);
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: $w-mb-xl) {
+    font-size: size(32);
+    line-height: size(38);
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+}
+
+section {
+  margin-bottom: 120px;
+
+  @media screen and (max-width: $w-mb-xl) {
+    margin-bottom: 60px;
+  }
+}
+
+.section-title {
+  margin: 0;
+  font-size: size(20);
+  line-height: size(24);
+  font-weight: 300;
+  color: $font-grey;
+
+  @media screen and (max-width: $w-mb-xl) {
+    font-size: size(12);
+    line-height: size(14);
+  }
+}
+
+@media (max-width: $w-mb-s) {
+	html,
+	body {
+			font-size: 5vw;
+	}
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+*,
+html * /* override x.xhtml.ru style */ 
+{
+  scrollbar-width: thin;
+  scrollbar-color: $white $blue;
+}
+
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+  background: $white;
+}
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 5px;
+  border: 3px solid $white;
+}
+
+.slider-arrows {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (max-width: $w-tb) {
+    margin-top: 32px;
+  }
+}
+
+.slide-arrow {
+  width: 40px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/r-arrow-40.svg");
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.slider-arrow-prev {
+  transform: rotate(-180deg);
+}

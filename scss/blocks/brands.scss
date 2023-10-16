@@ -1,0 +1,33 @@
+.brands__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+
+  @media screen and (max-width: $w-mb-xl) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+.brands__item {
+  max-width: 176px;
+  width: 100%;
+  height: 49px;
+
+  &:hover {
+    img {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.brands__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+
+  @media screen and (max-width: $w-ltb) {
+    filter: grayscale(0);
+  }
+}

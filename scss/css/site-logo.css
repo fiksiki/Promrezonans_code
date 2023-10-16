@@ -1,0 +1,15 @@
+.header-logo--mobile img {
+  width: 170px;
+}
+
+@media screen and (max-width: 630px) {
+  .footer-logo img {
+    width: 190px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .footer-logo-text {
+    display: none;
+  }
+}

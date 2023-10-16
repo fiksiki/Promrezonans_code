@@ -1,0 +1,56 @@
+.diplomas-card {
+  max-width: 355px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #CDCDCD;
+  background-color: $white;
+  transition: $ts;
+
+  @media screen and (max-width: 600px) {
+    padding: 2px;
+  }
+}
+
+.diplomas__slider{
+  padding: 70px 0;
+  min-width: 0;
+  flex: 1;
+
+  @media screen and (max-width: 600px) {
+    padding: 95px 0;
+  }
+}
+
+.diplomas__slider .swiper-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.diplomas__slider .swiper-slide-active {
+  z-index: 99;
+}
+
+.diplomas__slider .swiper-slide-active .diplomas-card{
+  transform: scale(1.25);
+  margin: 0 auto;
+
+  @media screen and (max-width: 600px) {
+    transform: scale(1.5);
+  }
+
+  @media screen and (max-width: 540px) {
+    transform: scale(1.6);
+  }
+
+  @media screen and (max-width: 430px) {
+    transform: scale(1.8);
+  }
+
+  @media screen and (max-width: 360px) {
+    transform: scale(2.0);
+  }
+}
+
+.diplomas__slider .swiper-slide-next .diplomas-card {
+  margin-left: auto;
+}

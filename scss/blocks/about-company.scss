@@ -1,0 +1,112 @@
+/*********** START о компании ************/
+.about-company {
+  .section-header__text {
+    font-size: size(32);
+    line-height: size(38);
+    font-weight: 400;
+
+    @media screen and (max-width: $w-mb-xl) {
+      font-size: size(20);
+      line-height: size(24);
+    }
+  }
+}
+
+.about-company__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media screen and (max-width: $w-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: $w-mb-xl) {
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+
+  li {
+    background-color: $bg-color-grey;
+    padding: 40px 16px 16px 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: size(20);
+    line-height: size(24);
+    font-weight: 400;
+    min-height: 249px;
+
+    @media screen and (max-width: $w-mb-xl) {
+      padding: 20px 13px 30px 20px;
+      row-gap: 0;
+      min-height: 165px;
+    }
+
+    strong {
+      font-size: size(82);
+      line-height: size(100);
+      font-weight: 500;
+      color: $blue;
+
+      @media screen and (max-width: $w-mb-xl) {
+        font-size: size(64);
+        line-height: size(77);
+      }
+
+      span {
+        font-size: size(24);
+        line-height: size(29);
+
+        @media screen and (max-width: $w-mb-xl) {
+          font-size: size(20);
+          line-height: size(24);
+        }
+      }
+    }
+  }
+}
+
+.about-company__map {
+  margin-top: 40px;
+  padding: 0 97px;
+  display: flex;
+  align-items: center;
+  column-gap: 77px;
+
+  @media screen and (max-width: $w-nb) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: $w-ltb) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.about-company__map-text {
+  margin: 0;
+  max-width: 474px;
+  width: 100%;
+  font-size: size(24);
+  line-height: size(35);
+  font-weight: 700;
+
+  @media screen and (max-width: $w-mb-xl) {
+    font-size: size(20);
+    line-height: size(29);
+  }
+
+  strong {
+    font-size: size(36);
+    line-height: size(52);
+    color: $blue;
+
+    @media screen and (max-width: $w-mb-xl) {
+      font-size: size(24);
+      line-height: size(35);
+    }
+  }
+}
+
+/*********** END о компании ************/

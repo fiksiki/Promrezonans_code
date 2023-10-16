@@ -1,0 +1,25 @@
+.page-content__wrap {
+  display: grid;
+  grid-template-areas: "text-a image";
+
+  p {
+    grid-column: 1 / -1;
+    margin: 0;
+
+    &:not(:last-of-type){
+      margin-bottom: 20px; 
+    }
+
+    &:first-of-type {
+      grid-area: text-a;
+      max-width: 768px;
+      width: 100%;
+    }
+  }
+
+  .page-content__image {
+    grid-area: image;
+    max-height: 357px;
+    margin-left: 60px;
+  }
+}

@@ -1,0 +1,278 @@
+.services__wrap {
+  display: grid;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  counter-reset: service;
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 32px;
+  }
+}
+
+.services__item {
+  position: relative;
+  min-height: 320px;
+  background-color: $bg-color-grey;
+  padding: 20px 32px 32px;
+  counter-increment: service;
+  display: grid;
+  grid-template-rows: 206px 1fr;
+  z-index: 0;
+  transition: $ts;
+  overflow: hidden;
+
+  max-width: 453px;
+  flex: 1 1 453px;
+
+  @media screen and (max-width: 1441px) {
+    min-width: 453px;
+    max-width: 690px;
+    flex: 1 1 auto;
+  }
+
+  @media screen and (max-width: 980px) {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: $w-mb-xl) {
+    padding: 20px;
+    min-height: 240px;
+    grid-template-rows: 162px auto;
+  }
+
+  &:nth-child(12n+9),
+  &:nth-child(12n+2) {
+    max-width: 927px;
+    flex: 1 1 927px;
+
+    .services__image {
+      max-height: 100%;
+    }
+
+    @media screen and (max-width: 1441px) {
+      min-width: 453px;
+      max-width: 690px;
+      flex: 1 1 auto;
+
+      .services__image {
+        max-height: 206px;
+      }
+    }
+
+    @media screen and (max-width: 980px) {
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &:nth-child(12n+11),
+  &:nth-child(12n+12) {
+    min-width: 453px;
+    max-width: 690px;
+    flex: 1 1 690px;
+
+    @media screen and (max-width: 1441px) {
+      min-width: 453px;
+      max-width: 690px;
+      flex: 1 1 auto;
+    }
+
+    @media screen and (max-width: 980px) {
+      min-width: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &::before {
+    content: counter(service, decimal-leading-zero);
+    font-size: size(20);
+    line-height: size(24);
+    font-weight: 600;
+    color: $blue;
+
+    @media screen and (max-width: $w-mb-xl) {
+      font-size: size(14);
+      line-height: size(17);
+    }
+  }
+}
+
+.services__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    transition: $ts linear;
+
+  &:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    width: 52px;
+    height: 52px;
+    z-index: 100;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons/arrow-right-circle.svg");
+  }
+}
+
+.services__item-title {
+  margin: 0;
+  max-width: 250px;
+  width: 100%;
+  font-size: size(24);
+  line-height: size(29);
+  font-weight: 400;
+  align-self: end;
+
+  @media screen and (max-width: $w-mb-xl) {
+    font-size: size(16);
+    line-height: size(19);
+  }
+}
+
+.services__image {
+  width: auto;
+  max-height: 206px;
+  object-fit: contain;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: -1;
+
+  @media screen and (max-width: $w-mb-xl) {
+    max-height: 162px;
+    width: 80%;
+    right: 0;
+  }
+}
+
+.services__button {
+  justify-self: center;
+}
+
+.services--repair-type {
+  .services__list {
+    margin-bottom: 0;
+  }
+}
+
+.services--repair-industry {
+  .services__item {
+    &:nth-child(12n+2) {
+      max-width: 453px;
+      flex: 1 1 453px;
+
+      @media screen and (max-width: 1441px) {
+        min-width: 453px;
+        max-width: 690px;
+        flex: 1 1 auto;
+      }
+
+      @media screen and (max-width: 980px) {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    &:nth-child(15n+2) {
+      max-width: 927px;
+      flex: 1 1 927px;
+  
+      .services__image {
+        max-height: 100%;
+      }
+  
+      @media screen and (max-width: 1441px) {
+        min-width: 453px;
+        max-width: 690px;
+        flex: 1 1 auto;
+  
+        .services__image {
+          max-height: 206px;
+        }
+      }
+  
+      @media screen and (max-width: 980px) {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.services--repair-factory {
+  
+  .services__list {
+    @media screen and (max-width: 1441px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }  
+
+    @media screen and (max-width: 600px) {
+      gap: 10px;
+    }
+  }
+
+  .services__item-title {
+    text-transform: uppercase;
+  }
+
+  .services__item {
+    grid-template-rows: auto;
+    gap: 10px;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    .services__link {
+      &:hover::after {
+        display: none;
+      }
+    }
+
+    &::before {
+      order: -2;
+    }
+
+    .services__image {
+      position: relative;
+      top:0;
+      right: 0;
+      left: 0;
+      order: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      justify-self: center;
+      align-self: center;
+      max-height: 206px;
+
+      @media screen and (max-width: 600px) {
+        max-height: 75px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      min-height: 160px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+/**********START баннер главная *********/ 
+
+.page-banner {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  min-height: 655px;
+  overflow: hidden;
+
+  .section-header__left--mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: $w-tb) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 496px;
+
+    .section-header__left {
+      display: none;
+    }
+    .section-header__left--mobile {
+      display: block;
+      margin-top: 32px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 655px;
+    height: 655px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/banner-img.svg");
+  }
+
+  .section-header {
+    margin-bottom: 0;
+  }
+}
+
+.page-banner__content {
+  max-width: 729px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+
+  @media screen and (max-width: $w-mb-xl) {
+    row-gap: 0;
+
+    .page-banner__button {
+      margin-top: 100px;
+    }
+  }
+
+  h1, p {
+    margin: 0;
+  }
+}
+
+.page-banner__title {
+  font-size: size(32);
+  line-height: size(38);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media screen and (max-width: $w-ltb) {
+    font-size: size(20);
+    line-height: size(24);
+  }
+
+  strong {
+    font-size: size(64);
+    line-height: size(77);
+
+    @media screen and (max-width: $w-ltb) {
+      font-size: size(36);
+      line-height: size(43);
+    }
+
+    &.page-banner__title--blue {
+      color: $blue;
+    }
+  }
+}
+
+/**********END баннер главная *********/ 

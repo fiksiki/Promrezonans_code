@@ -1,0 +1,45 @@
+.bread-krambs {
+  margin-top: 60px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 20px;
+  }
+}
+.bread-krambs ul{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.bread-krambs li, .bread-krambs li a{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #3E3E3E;
+
+  @media screen and (max-width: 600px) {
+    font-size: size(14);
+    line-height: size(17);
+  }
+}
+.bread-krambs li + li{
+  margin-left: 12px;
+  padding-left: 20px;
+  position: relative;
+
+}
+.bread-krambs li + li:before{
+  content: ">";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #3E3E3E;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: size(14);
+    line-height: size(17);
+  }
+}

@@ -1,0 +1,7 @@
+section.page-content--repair-type {
+  margin-bottom: 60px;
+
+  @media screen and (max-width: $w-mb-xl) {
+    margin-bottom: 20px;
+  }
+}

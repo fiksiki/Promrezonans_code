@@ -1,0 +1,19 @@
+.header-logo--mobile {
+  img {
+    width: 170px;
+  }
+}
+
+.footer-logo {
+  @media screen and (max-width: 630px) {
+    img {
+      width: 190px;
+    }
+  }
+}
+
+.footer-logo-text {
+  @media screen and (max-width: 630px) {
+    display: none;
+  }
+}

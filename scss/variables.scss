@@ -1,0 +1,37 @@
+//шрифты
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+$font-body: "Fira Sans", sans-serif;
+$font-menu: "Roboto Condensed", sans-serif;
+
+// Цвета общие
+$black: #000000;
+$white: #ffffff;
+$blue: #016FBD;
+$gold: #C5B527;
+$font-color: #000000;
+$font-grey: #3E3E3E;
+$font-footer-grey: #9D9D9D;
+$placeholder-color: #7A7A7A;
+$bg-footer-dark: #222222;
+$bg-color-grey: #F7F7F9;
+
+// media
+$w-xl: 1920px;
+$w-l: 1440px;
+$w-nb: 1280px;
+$w-lg: 1024px;
+$w-ltb: 991px;
+$w-tb: 768px;
+$w-mb-xl: 600px;
+$w-mb-l: 430px;
+$w-mb-s: 320px;
+
+// Доп переменные
+$fs: 16; // размер шрифта
+$lh: 1.4; // межстрочный интервал
+$ts: 0.4s; // время для transition
+
+@function size($size) {
+    @return calc($size / $fs * 1rem)
+};

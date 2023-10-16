@@ -1,0 +1,69 @@
+.site-phone {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  column-gap: 16px;
+  align-items: center;
+  color: $font-color;
+  font-size: size(32);
+  line-height: size(38);
+  font-weight: 400;
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons/phone-call.svg");
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.site-phone--footer {
+  color: $white;
+
+  @media screen and (max-width: 630px) {
+    font-size: size(24);
+    line-height: size(29);
+    grid-template-columns: 20px 1fr;
+    column-gap: 8px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      background-size: 100%;
+    }
+  }
+
+  &::before {
+    background-image: url("../img/icons/phone-call-w.svg");
+  }
+}
+
+.site-phone--mobile-top {
+  @media screen and (max-width: $w-ltb) {
+    grid-template-columns: auto;
+    width: 32px;
+
+    &::before {
+      background-size: 50%;
+      background-color: $bg-color-grey;
+      border-radius: 50%;
+    }
+  }
+}
+
+.site-phone--mobile-menu {
+  grid-template-columns: 24px 1fr;
+  font-size: size(24);
+  line-height: size(29);
+
+  &::before {
+    width: 24px;
+    height: 24px;
+  }
+}
